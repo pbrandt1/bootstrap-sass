@@ -9,12 +9,13 @@
 
 // Import the fonts
 @font-face {
+  $icon-font-url: if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}'), #{$icon-font-path}#{$icon-font-name});
   font-family: 'Glyphicons Halflings';
-  src: url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.eot'), '#{$icon-font-path}#{$icon-font-name}.eot'));
-  src: url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.eot?#iefix'), '#{$icon-font-path}#{$icon-font-name}.eot?#iefix')) format('embedded-opentype'),
-       url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.woff'), '#{$icon-font-path}#{$icon-font-name}.woff')) format('woff'),
-       url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.ttf'), '#{$icon-font-path}#{$icon-font-name}.ttf')) format('truetype'),
-       url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.svg##{$icon-font-svg-id}'), '#{$icon-font-path}#{$icon-font-name}.svg##{$icon-font-svg-id}')) format('svg');
+  src: url('#{$icon-font-url}.eot');
+  src: url('#{$icon-font-url}.eot?#iefix') format('embedded-opentype'),
+  url('#{$icon-font-url}.woff') format('woff'),
+  url('#{$icon-font-url}.ttf') format('truetype'),
+  url('#{$icon-font-url}.svg##{$icon-font-svg-id}') format('svg');
 }
 
 // Catchall baseclass
